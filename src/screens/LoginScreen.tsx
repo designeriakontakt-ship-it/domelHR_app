@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native'; // Dodano View
 import { useAuth } from '../context/AuthContext';
 
 const LoginScreen = ({ navigation }) => {
@@ -13,6 +13,8 @@ const LoginScreen = ({ navigation }) => {
             <TextInput
                 style={styles.input}
                 placeholder="Adres email"
+                                placeholderTextColor="#888" // <-- DODAJ TĘ LINIĘ (kolor ciemnoszary)
+
                 value={email}
                 onChangeText={setEmail}
                 autoCapitalize="none"
@@ -21,6 +23,8 @@ const LoginScreen = ({ navigation }) => {
             <TextInput
                 style={styles.input}
                 placeholder="Hasło"
+                                placeholderTextColor="#888" // <-- DODAJ TĘ LINIĘ (kolor ciemnoszary)
+
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
